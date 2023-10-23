@@ -1,0 +1,24 @@
+applications:
+- name: map-locator
+  buildpack: dicf_nodejs_buildpack_latest
+  memory: 512M
+  disk_quota: 512M
+  instances: 1
+  stack: cflinuxfs3
+  random-route: false
+  command : node index.js
+# env:
+#   HTTPS_PROXY : http://proxy:80
+
+env:
+  NODE_TLS_REJECT_UNAUTHORIZED: 0
+  GRANT_TYPE: authorization_code
+  # SSO_IDENTITY_PROVIDERS: 
+  # SSO_SCOPES: openid
+  SSO_SCOPES: openid, roles, uaa.resource, user_attributes
+  SSO_AUTO_APPROVED_SCOPES: openid, roles, uaa.resource, user_attributes
+  show_on_home_page: true
+  redirect_uris: http://127.0.0.1:5000/getDashboard
+  # SSO_AUTO_APPROVED_SCOPES: openid
+  # APP Id: 853a12f8-dcfc-451e-b83b-4f2a74c3243e
+  # App Secret: 46d55947-05dc-44db-8762-5177fa6a0f96
