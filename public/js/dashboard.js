@@ -6,7 +6,7 @@ let dictRooms = {
 	'AG19': ['ag19', 'thinkubator'],
 	'AS07': ['as07', 'placom'],
 	'AG05': ['ag05', 'mr1', 'mr2'],
-	'AG21': ['ag21', 'dean', 'deans office'],
+	'AG21': ['ag21', 'dean', 'dean office', 'deans office'],
 	'AG07': ['ag07', 'central procurement', 'examination', 'sos', 'docc'],
 	'AG09': ['ag09'],
 	'AG11': ['ag11', 'ac1', 'ac2'],
