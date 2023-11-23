@@ -1,5 +1,7 @@
 'use strict';
 
+let lastSearchedRoom = '';
+
 let dictRooms = {
 	//Room no. :[keywords in lower]
 	'AG01': ['ag01', 'administration', 'central administration'],
@@ -17,9 +19,9 @@ let dictRooms = {
 	'AG22': ['ag22', 'mr3', 'mr4'],
 	'AF02': ['af02', 'central program', 'hr', 'pgdm office', 'marketing', 'pgdm program office'],
 	'AS01': ['as01', 'central admissions'],
-	'AS03': ['as03', 'dome 1'],
-	'AS02': ['as02', 'dome 2'],
-	'AT03': ['at03', 'dome 3'],
+	'AS03': ['as03', 'dome 1','dome1'],
+	'AS02': ['as02', 'dome 2','dome2'],
+	'AT03': ['at03', 'dome 3','dome3'],
 	'AS05': ['as05', 'ncr 1'],
 	'AS06': ['as06', 'ncr 2'],
 	'AT01': ['at01', 'meditation room'],
@@ -123,7 +125,11 @@ function handleEnterKeyPress(event) {
       event.preventDefault();
       const inputElement = document.getElementById('searchInput');
       const searchQuery = inputElement.value;
+	  if(lastSearchedRoom){
+		document.getElementById(searchRoom(lastSearchedRoom)).classList.remove('focused');
+	  }
 	  let tempRoom = document.getElementById(searchRoom(searchQuery));
+	  lastSearchedRoom = searchQuery;
 	  console.log("Element ",tempRoom);
 	  tempRoom.classList.add('focused')
 	  tempRoom.scrollIntoView();
