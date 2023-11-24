@@ -17,7 +17,7 @@ let dictRooms = {
 	'AG18': ['ag18', 'utility room', 'store room'],
 	'AG20': ['ag20', 'dcr'],
 	'AG22': ['ag22', 'mr3', 'mr4'],
-	'AF02': ['af02', 'central program', 'hr', 'pgdm office', 'marketing', 'pgdm program office'],
+	'AF02': ['af02', 'central program', 'hr', 'pgdm office', 'marketing', 'pgdm program office', 'pgdm'],
 	'AS01': ['as01', 'central admissions'],
 	'AS03': ['as03', 'dome 1','dome1'],
 	'AS02': ['as02', 'dome 2','dome2'],
