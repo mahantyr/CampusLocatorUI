@@ -3,10 +3,8 @@
 const axios = require("axios");
 const httpStatus = require("http-status");
 const config = require("../../config.js");
-const ApiError = require("../../error/ApiError");
+const ApiError = require("../../error/ApiError.js");
 var moment = require('moment-timezone');
-var url = 'https://api.status.salesforce.com/v1/instances/';
-var maintenanceURL = 'https://api.status.salesforce.com/v1/maintenances?instance=';
 
 const fetch = require("node-fetch");
 
